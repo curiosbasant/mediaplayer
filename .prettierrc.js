@@ -1,7 +1,44 @@
+/**
+ * @typedef {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} PrettierConfig
+ * @typedef {import("prettier-plugin-tailwindcss").PluginOptions} TailwindConfig
+ */
+
+/** @satisfies { PrettierConfig & TailwindConfig } */
 module.exports = {
-  arrowParens: 'avoid',
+  plugins: [
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss',
+  ],
+
+  // Base Config
+  arrowParens: 'always',
   bracketSameLine: true,
-  bracketSpacing: false,
+  bracketSpacing: true,
+  endOfLine: 'lf',
+  jsxSingleQuote: true,
+  printWidth: 100,
+  semi: false,
   singleQuote: true,
-  trailingComma: 'all',
+  tabWidth: 2,
+  useTabs: false,
+
+  // Tailwind Config
+  tailwindFunctions: ['cn', 'cva'],
+
+  // Import Config
+  importOrder: [
+    '^(react/(.*)$)|^(react$)|^(react-native(.*)$)',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '^~/',
+    '^[../]',
+    '^[./]',
+  ],
+  importOrderBuiltinModulesToTop: true,
+  importOrderCombineTypeAndValueImports: true,
+  importOrderMergeDuplicateImports: true,
+  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
+  importOrderSeparation: false,
+  importOrderSortSpecifiers: true,
+  importOrderTypeScriptVersion: '5.4.4',
 };

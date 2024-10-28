@@ -1,0 +1,27 @@
+{
+  "conventionalCommits.promptBody": false,
+  "conventionalCommits.promptFooter": false,
+  "conventionalCommits.promptScopes": false,
+  "cSpell.words": ["ianvs", "nativewind", "Pressable", "tailwindcss"],
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "never"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "reactSnippets.settings.importReactOnTop": false,
+  "reactSnippets.settings.languageScopes": "typescriptreact,javascriptreact",
+  "tailwindCSS.experimental.classRegex": [
+    ["Classes ?\\=([^;]*)", "'([^']*)'"],
+    ["Classes ?\\=([^;]*)", "\"([^\"]*)\""],
+    ["Classes ?\\=([^;]*)", "\\`([^\\`]*)\\`"],
+    ["ClassName ?\\=([^;]*)", "'([^']*)'"],
+    ["ClassName ?\\=([^;]*)", "\"([^\"]*)\""],
+    ["ClassName ?\\=([^;]*)", "\\`([^\\`]*)\\`"],
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}

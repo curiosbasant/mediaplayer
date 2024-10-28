@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "start:reset": "react-native start --reset-cache",
     "windows": "react-native run-windows"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@react-native-community/cli": "15.0.0-alpha.2",
     "@react-native-community/cli-platform-android": "15.0.0-alpha.2",
     "@react-native-community/cli-platform-ios": "15.0.0-alpha.2",
@@ -28,7 +30,8 @@
     "@react-native/typescript-config": "^0.75.3",
     "@types/react": "^18.2.6",
     "metro-config": "^0.80.12",
-    "prettier": "2.8.8",
+    "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.14",
     "typescript": "5.0.4"
   },
