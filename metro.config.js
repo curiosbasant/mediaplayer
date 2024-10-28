@@ -1,4 +1,5 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+const { withNativeWind } = require('nativewind/metro');
 
 const fs = require('fs');
 const path = require('path');
@@ -8,16 +9,12 @@ const rnwPath = fs.realpathSync(
   path.resolve(require.resolve('react-native-windows/package.json'), '..'),
 );
 
-//
-
 /**
  * Metro configuration
  * https://facebook.github.io/metro/docs/configuration
- *
- * @type {import('metro-config').MetroConfig}
  */
 
-const config = {
+const config = mergeConfig(getDefaultConfig(__dirname), {
   //
   resolver: {
     blockList: exclusionList([
@@ -40,6 +37,6 @@ const config = {
       },
     }),
   },
-};
+});
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+module.exports = withNativeWind(config, { input: "./src/global.css" });;
